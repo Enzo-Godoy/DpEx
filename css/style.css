@@ -1,0 +1,63 @@
+/* Comentario : Anatomía de una Regla CSS;
+
+selector { 
+	propiedad:valor;
+	propiedad:valor;
+	propiedad:valor;
+}
+
+*/
+
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+	font-size: 14px;
+	color:#b12c02;
+	/* color : #333333 ----> color : #333*/
+}
+
+
+
+header {
+	background-color: #333;
+	color:#FFF;	
+	padding: 10px;
+    overflow:auto;	
+}
+
+
+
+/* Cuando un contenedor no flotante, contiene hijos flotantes {
+el contendor padre pierde la capacidad de estirar en su altura.
+salvo overflow ---> permite decirle al navegador que hacer cuando 
+el contenido es mayor que la caja.	*/
+
+header h1  {
+	margin:0px;
+	float :left;
+	margin-top: 10px;
+}
+
+header ul li {
+	display: inline-block;
+	padding: 5px;	
+
+}
+header ul li a {	
+	color:#FFF;
+	text-decoration: none;
+	text-align: center;
+
+}
+
+nav {	
+	margin: 0px;
+	list-style: none;
+	width:60%;
+	float : right;
+}
+
+
+
+
