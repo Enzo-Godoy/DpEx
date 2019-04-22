@@ -7,9 +7,7 @@ selector {
 }
 
 */
-* {
-	outline: 2px red solid;
-}
+
 
 body{
 	margin: 0px;
@@ -87,3 +85,35 @@ nav {
 }
 
 
+
+
+/* <-- refiere a un elemento con id="noticias-destacadas."*/
+
+#noticias-destacadas img {
+	width: 100%;
+	display: block;
+}
+
+#noticias-destacadas h2 { 
+background-color: #333;
+color:#FFF; 
+font-size: 32px;
+font-weight: bold;
+padding: 20px;
+
+}
+
+
+/* Siempre a referencia con ancho, vw viewport wuev,
+
+developers.google.com/speed/pagespeed
+
+
+3 < bueno 
+5 <= regular
+7 > preocupante.
+10= regular
+10 > mala
+
+
+*/
