@@ -18,6 +18,11 @@ body{
 	/* color : #333333 ----> color : #333*/
 }
 
+img {
+	width: 100%;
+	display:block;
+}
+
 
 
 header {
@@ -103,6 +108,20 @@ padding: 20px;
 
 }
 
+.noticia-img { 
+	width: 30%;
+}
+
+.noticia-txt { 
+	width: 70%;
+}
+
+
+
+/* 
+Llamadas en plural con nombre plural ,llamadas singular con individual.
+
+*/
 
 /* Siempre a referencia con ancho, vw viewport wuev,
 
