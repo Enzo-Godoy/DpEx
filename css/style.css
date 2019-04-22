@@ -40,7 +40,29 @@ header h1  {
 	float :left;
 	font-size:28px;
 	font-weight: 500;
+	/*  Cuidado con rutas relativas, para volver atras uso '..'  
+	El padding no afecta el background solo los elementos
+	*/
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	padding-left: 70px;
+	/* (x,y) ejes x e y. en background position - valores en px Apx Bpx
+	right , left, center.    tambien puedo usar doble medidas default
+	*/
+	background-position: left center;
+	/* Admite dos valores tambien, primero ancho, segundo alto, con porcentajes
 
+	cover: pantalla estirada completa;
+	alto proporiconal. 
+
+	contain : ajusta al alto de la pantalla.
+	ancho proporcional;
+	*/
+	background-size: contain;
+}
+
+header a:hover {
+	color:#AAA;
 }
 
 header ul li {
@@ -65,8 +87,3 @@ nav {
 }
 
 
-section img {
-	clear: both;
-	width: 100%;
-
-}
