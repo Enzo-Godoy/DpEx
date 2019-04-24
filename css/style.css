@@ -7,6 +7,11 @@ selector {
 }
 
 */
+/*
+* {
+	outline: dashed 1px red;
+}
+*/
 
 
 body{
@@ -14,7 +19,6 @@ body{
 	padding: 0px;
 	font-family: sans-serif;
 	font-size: 14px;
-	color:#b12c02;
 	/* color : #333333 ----> color : #333*/
 }
 
@@ -94,9 +98,9 @@ nav {
 
 /* <-- refiere a un elemento con id="noticias-destacadas."*/
 
+
 #noticias-destacadas img {
 	width: 100%;
-	display: block;
 }
 
 #noticias-destacadas h2 { 
@@ -108,12 +112,101 @@ padding: 20px;
 
 }
 
+.noticia {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content:space-around;
+	border-bottom:solid 2px gray;
+	margin : 0 20px;
+	padding:20px 0; 
+
+}
+
+.noticia:last-child{
+	background-color: red;
+	border:none;
+
+}
+	/*
+		Valor por defecto row, 
+		se distribuyen por la misma fila
+		Valor column se demuestran uno debajo del otro.
+		Hay row, column reverse.
+
+		Align items en row es eje y (start, center, end) 
+		start
+		center
+		end
+
+		Align item es column en eje x (start, center, end)
+		start
+		center
+		end
+
+		Tanto start com end se escriben con Flex- start/end
+			flex-start| center | flex-end 
+
+		Posibles valores no usuales 
+
+
+		Justify content 
+		flex-start | center | flex-end
+
+
+		justify-content 
+		space-between  espacio entre los elementos, demas espacio proporcional
+		space-around : distribuye proporcional entre elementos;
+
+
+
+	*/
+
+
+
 .noticia-img { 
 	width: 30%;
+
 }
 
 .noticia-txt { 
-	width: 70%;
+	width: 60%;
+	/*
+	margin-right: 25%;
+	padding-top: 20px;
+
+	margin : ?arriba? ?right? ?bottom? ?left?;
+	Sigo guiando las agujas del reloj
+	*/
+}
+
+.noticia-txt p,
+.noticias-txt h3,
+.noticias-txt p {
+
+	/* margin: 10px 0 10px 0; */
+	/* Se puede simplificar escribiendo solo las dos primeras*/
+	margin : 10px 0;
+}
+
+.noticia-txt h3{ 
+	font-weight: 700;
+	font-size: 28px;
+	font-style: helvetica;
+}
+
+
+
+.noticia-txt p a{ 
+	color:#000;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+
+
+#ultimas-destacadas {
+	height: 700px;
 }
 
 
@@ -135,4 +228,10 @@ developers.google.com/speed/pagespeed
 10 > mala
 
 
+display inline no me permite asignar un width.
+
+
 */
+
+
+
