@@ -86,8 +86,6 @@ header ul li a {
 	color:#FFF;
 	text-decoration: none;
 	text-align: center;
-	
-
 }
 
 nav {	
@@ -151,6 +149,7 @@ padding: 20px;
 	font-size: 24px;
 
 }
+
 
 #tabla-posiciones table td{ 
 	padding: 10px;
@@ -265,6 +264,44 @@ footer {
 	font-size: 12px;
 	padding: 10px;
 	margin: 12px 0 0 0;
+}
+
+
+
+@media screen and (max-width: 320px) and (max-width: 480px) { 
+	header h1 { 
+		font-size: 24px;
+		padding-left: 
+	}
+
+
+	header nav{ 		
+		display: none;
+		float: none;
+		clear:both;
+	}
+	header nav li {
+		display: block;
+	}
+	header button { 
+		margin:0;
+		padding: 5px ;
+		color : #FFF;
+		border: none;
+		float: right;
+		background-color: transparent;
+		font-size:20px; 
+		line-height: 1;
+		font-weight: 700;
+
+	}
+
+	header button:focus + nav{
+		color:red;
+		display:block;
+	}
+	
+
 }
 
 
