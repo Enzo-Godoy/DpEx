@@ -1,162 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>DX - DeporteXtremo</title>
-	<link rel="stylesheet" href="./css/reset.css">	
-	<link rel="stylesheet" href="./css/style.css"> 
-</head>
-<body>
-	<header>
-		<h1>Deporte eXtremo</h1>
-		<button>&#9776</button>
-		<nav>
-			<ul>
-				<li><a href="#">Fútbol</a></li>
-				<li><a href="#">NBA</a></li>
-				<li><a href="#">Tenis</a></li>
-				<li><a href="#">Fórmula 1</a></li>
-				<li><a href="#">Boxeo</a></li>
-				<li><a href="#">JJOO</a></li>
-				<li><a href="#">Moto GP</a></li>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-			</ul>
-		</nav>	
-	</header>
-	<!-- Los tres elementos importantes encabezado, cuerpo y pie. Solo un main por HTML -->
-	<main>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
 
-		<!-- Noticias Destecadas ..  -->
-		<section id="noticias-destacadas">
-			<!-- Hagamos uso y no abuso, cuanto más clarificado los elementos mejora la posición órganiza  
-			
-			Metodologias, scrum, relevamiento, actividades,preparaciom  , strema programming, código auto identificado.
-		--> 
+    body {
+      font-family : 'Gugi',  sans-serif;
+    }
+    </style>
 
-			<figure>
-				<!-- Recursos multimedia -->
-				<img src="img/juegos-olimpicos.jpg">
-				<figcaption><h2>Paris y Los Ángeles serán las próximas sedes de los Juegos Olímpicos</h2></figcaption>
-			</figure>
-		
-		</section>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+              <!-- Inicio de menu -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
+              <a class="navbar-brand" href="#">DeporteXtremo</a>
 
-		<section id="ultimas-destacadas">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
 
-        	<article class="noticia">
+              <span class="navbar-toggler-icon"></span>
+              </button>
 
-        		<div class="noticia-img"><img src="img/sorteo-libertadores.jpg"></div>
-        		<div class="noticia-txt">
-        			<h3>La tecnología llega a la actual edición de la Libertadores</h3>
+                <div class="collapse navbar-collapse" id="menu">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="fas fa-futbol"></i> Fútbol</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">NBA</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Tenis</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Fórmula 1</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Boxeo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">JJOO</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Moto GP</a>
+                    </li>
+                  </ul>
+                  
+                </div>
+            </nav>
+        <!-- Fin de menú -->
 
-        		  <p>por  <a href="#">Joaquín  Angeli</a> </p>
-        		  <p>La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.</p>
-
-        		</div>
-        	</article>
-        	
-        	<!-- Noticia 2 -->
-        	<article class="noticia">
-        		<div class="noticia-img"><img src="img/tickets-rusia-mundial.jpg"></div>
-        		<div class="noticia-txt">
-        			<h3>Comenzó la venta de entradas para el Mundial de Rusia 2018</h3>
-
-        		  <p>por  <a href="#">Laura Smasnatta</a></p>
-
-        		  <p>Comenzó la venta de entradas para el Mundial de Rusia 2018.</p>
-
-        		</div>
-        		</article>
-
-        		<!--Inicio Noticia 3 -->		    
-        	<article class="noticia">
-        		<div class="noticia-img"><img src="img/firpo.jpg"></div>
-        		<div class="noticia-txt">
-        			<h3>A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo</h3>
-
-        		  <p>por <a href="#">Diego Di Marco</a></p>
-
-        		  <p>El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia.</p>
-
-        		</div>
-        	</article>
+        <!-- Slide de imagenes --> 
 
 
-        	<!--Inicio Noticia 4 -->
-        	<article class="noticia">
-        		<div class="noticia-img"><img src="img/buenos-aires.jpg"></div>
-        		<div class="noticia-txt">
-        			<h3>Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI</h3>
+                      <div id="slide-imagen" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./img/sorteo-libertadores.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./img/sorteo-libertadores.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        <div class="carousel-item">
+                          <img src="./img/sorteo-libertadores.jpg" class="d-block w-100" alt="...">
+                          <!--caption -->
+                          <div class="carousel-caption  d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                        </div>
+                         
+                        </div>
+                        <a class="carousel-control-prev" href="#slide-imagen" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#slide-imagen" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+                      <!-- fin slide de imagenes -->
 
-        		  <p>por <a href="#">Melina Morales.</a></p>
-
-        		  <p>El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre.</p>
-
-        		</div>
-        	</article>
-		</section >
-	
+   <article class="row noticia">
 
 
-		<section id="tabla-posiciones">
-			<table>
-				<tr>
-					<th colspan="4"> 3er Fecha</th><!--celda cabecera -->
-				</tr>
-				<tr><!--Fila 1 -->
-					<td>1</td>
-					<td> 
-						<span> Tigre </span> , 1pts <br>
-						<span> Patronatos </span>  3pts  </td>					
-					<td>2</td>
-					<td> <span> Colón </span> , 4ptos <br>
-					 <span> Estudiantes </span> , 3ptos</td>
-				</tr>
 
-				<tr><!--Fila 2 -->
-					<td>1</td>
-						<td> 
-						 <span> Tigre </span> , 1pts <br>
-						 <span> Patronatos </span> 3pts</td>					
-					<td>2</td>
-						<td> 
-						  <span> Colón </span> , 4ptos <br>
-						  <span> Estudiantes </span> , 3ptos</td>
-				</tr>
+                  <main class="container-fluid">
+              /*  div.row>div.col-12{Noticias #}*2  /*
 
-				<tr><!--Fila 3 -->
-					<td>1</td>
-					<td> 
-						 <span> Tigre </span> , 1pts <br>
-						 <span> Patronatos </span> 3pts</td>					
-					<td>2</td>
-					<td> <span> Colón </span> , 4ptos <br>
-					     <span> Estudiantes </span> , 3ptos</td>
-				</tr>
 
-				<tr><!--Fila 4 -->
-					<td>1</td>
-					<td> <span> Tigre </span> , 1pts <br>
-					     <span> Patronatos </span> 3pts</td>					
-					<td>2</td>
-					<td> <span> Colón </span> , 4ptos <br>  
-					     <span> Estudiantes </span> , 3ptos</td>
-				</tr>
-			</table>
+                    <div class="row">
 
-		</section>
+                      <div class="col-12 col-md-6 col-lg-12">
 
-		</main>
+                         <div class="row noticia">
 
-    
-	<!-- AREA DE SCRIPT -->
-	<script type="./js/main.js"></script>
-	<footer id="footer">
+                              <div class="col-12 col-lg-4 noticia-img">
+                                <img src="./img/sorteo-libertadores.jpg" class="img-fluid" alt="img libertadores">
+                                </div>
+                              
 
-		<p>	&copy; 2019 Ejemplo de clase EANT</p>
-    </footer>
-	
-</body>
+                                  <div class="col-12  col-lg-8 noticia-txt ">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                  </div>
+                                  <!--fin noticia -->
+                                </div>  
+                          </div>  
+
+                         <div class="col-12 col-md-6 col-lg-12">
+                           <div class="row noticia">
+
+                              <div class="col-12  col-lg-4 notica-img" >
+                                <img src="./img/sorteo-libertadores.jpg" class="img-fluid" alt="img libertadores">
+                                </div>
+                              
+
+                              <div class="col-12 col-lg-8 noticia-txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                              </div>
+                              <!--fin noticia -->
+                           </div>  
+
+                         </div>
+
+
+
+                      </div>
+                    </div>
+
+                  <form action="">
+                   <i class="fas fa-search"></i> <input type="text" class=""><i class="fas fa-search"></i></input>
+                  </form>
+
+
+
+                 
+        </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
