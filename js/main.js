@@ -48,7 +48,7 @@ logo.onclick = cambiarLogo
 
 //Código de los articles
 
-
+/*
 
       let noticia1 = { 
         imagen :"sorteo-libertadores.jpg",
@@ -76,4 +76,6 @@ logo.onclick = cambiarLogo
         titulo:"Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI", 
         autor :"Melina Morales", 
         bajada : "El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre." 
-      }
+       
+
+       */

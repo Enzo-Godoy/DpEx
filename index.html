@@ -115,15 +115,31 @@
     <script src="js/main.js"></script>
     <script>
 
-  
+                    //Request lo que pide el cliente
+      let ajax = new XMLHttpRequest();
+      ajax.open("GET" ,noticias.json);
 
-      let noticias =  [noticia1,noticia2,noticia3,noticia4];
+      ajax.onload = mostrarNoticias; 
+      ajax.send(); 
+
+      function mostrarNoticias() {
+        if( ajax.status == 200) {
+          // <-- Respuesta exitosa 
+
+          //responde lo que devuelve
+          console.log( ajax.response);
+
+        }
+
+      }
+
+      /**
+      ajax.open( archivo???, ruta???)
+      */
 
       for(let i= 0 ; i < noticias.length ; i++) {        
       console.log(i);
       crearNoticia(noticias[i].titulo, noticias[i].autor, noticias[i].bajada,noticias[i].imagen);
-
-
 
       }
 
