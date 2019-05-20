@@ -1,47 +1,55 @@
+<h1>Introduccion a JavaScript</h1>
 
-<h1>Introduccion a Js</h1>
+<button id="nuevo">Nuevo Producto</button>
+
+<section id="listado-productos"></section>
 
 <script>
-/*Introducción */
-	const IVA = 1.21;
+	/* Introduccion */
+	const IVA = 1.21
 
-	//alert("Hola mundo!");
-	console.log("Hola mundo!");
-	let nombre =prompt("Ingrese nombre");
-	let stock = prompt("Ingrese stock");
-	let precio = prompt("Ingrese precio");
-	let disponible =confirm("¿Disponible para la venta?");
-	let ficha,  estado =  null;
-    
-    /* Nudo */
+	document.querySelector("#nuevo").onclick = crearProducto
+	
 
-	precioFinal = precio * IVA;
+/////////////////////////////////////////////////
+function crearProducto(){
+	/* Inicio funcion */
+	let nombre = prompt("Ingrese nombre:")
+	let stock = prompt("Ingrese stock:")
+	let precio = prompt("Ingrese precio:")
+	let disponible = confirm("¿Disponible para la venta?")
+	let ficha, estado, accion = null
 
-	//Si el producto está disponible 
-	// if(precio > 100 || precio < 200) {	}
+	/* Nudo */
+	precio = precio * IVA
 
-	if(disponible == true) {
-		 estado = "Producto disponible :)";
-	   	 accion = `<button> Comprar </button>` ;
-	}else  { estado = "Producto No disponible :(";
-		accion = `<a href="#">Recibir alerta cueando este disponible </a>`
+	//Si el producto esta disponible...
+	//if( precio > 100 && precio < 200 ){}
+
+	if( disponible ){
+		estado = "Producto disponible :)"
+		accion = `<button>Comprar</button>`
+	} else {
+		estado = "Producto NO disponible :("
+		accion = `<a href="#">Recibir alerta cuando este disponible</a>`
 	}
 
-	//ficha =`<p>Hay ${stock} unid. de ${nombre} a ${precio} c/u</p>`;
+	/* Desenlace */
+	//ficha = `<p>Hay ${stock} unid. de <em>${nombre}</em> a AR ${precio} c/u</p>`
 
 	ficha = `<ul>
-		<li>Nombre: ${nombre}</li>
-		<li>Precio: ${precio} AR</li>
-		<li>Stock: ${stock}unid.</li>
-		<li>Estado:${estado}</li>
-		<li>${accion}</li>
-	</ul> `;
-	document.write(ficha)
+				<li>Nombre: ${nombre}</li>
+				<li>Precio: ${precio} AR</li>
+				<li>Stock: ${stock} unid.</li>
+				<li>Estado: ${estado}</li>
+				<li>${accion}</li>
+			 </ul>`
 
-	/* Desenlace */
-
-	// console.log(`Hay ${stock} unid. de ${nombre} a ${precio} c/u`)
-	//document.write(`Hay ${stock} unid. de ${nombre} a ${precio} c/u`)
-
+	//document.write(ficha)
+	document.querySelector("#listado-productos").innerHTML = ficha
+	/* Fin funcion */
+}
 </script>
+
+<!-- ul>li*4>{dato: valor} -->
 
