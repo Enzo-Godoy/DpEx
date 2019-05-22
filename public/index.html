@@ -118,30 +118,56 @@
                     //Request lo que pide el cliente
       let ajax = new XMLHttpRequest();
       ajax.open("GET" ,"noticias.json");
-
-      ajax.onload = mostrarNoticias; 
-      ajax.send(); 
-
-      function mostrarNoticias() {
+      ajax.onload = function() {
         if( ajax.status == 200) {
-          // <-- Respuesta exitosa 
-
+          // <-- Respuesta exitosa
           //responde lo que devuelve
-          console.log( ajax.response);
 
-        }
+          //console.log( ajax.response);
 
-      }
+
+
+          console.log("Antes del parseo");
+          console.log(ajax.response);
+
+          let noticias = JSON.parse(ajax.response);
+
+          console.log("Antes del parseo");
+          console.log(noticias);
+
+
+
+          //Mostrar las noticias
+          /*
+           for(let i= 0 ; i < noticias.length ; i++) {        
+            console.log(i);
+            crearNoticia(noticias[i].titulo, noticias[i].autor, noticias[i].bajada,noticias[i].imagen);
+            }
+
+       
+        */
+
+         }
+      } 
+      
+      //ajax.onload = mostrarNoticias; 
+      //ajax.send(); 
+
+      /*
+      Obtenerlos, 
+      convertirlos a formato entendido por lenguaje. 
+      procesarlos
+      mostrarlos.
+
+      */
+
+      
 
       /**
       ajax.open( archivo???, ruta???)
       */
 
-      for(let i= 0 ; i < noticias.length ; i++) {        
-      console.log(i);
-      crearNoticia(noticias[i].titulo, noticias[i].autor, noticias[i].bajada,noticias[i].imagen);
-
-      }
+     
 
       /*
 

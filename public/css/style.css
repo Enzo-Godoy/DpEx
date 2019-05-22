@@ -1,0 +1,330 @@
+/* Comentario : Anatomía de una Regla CSS;
+
+selector { 
+	propiedad:valor;
+	propiedad:valor;
+	propiedad:valor;
+}
+
+*/
+/* 
+*/
+
+/* 
+*{
+	outline: dashed 1px red !important;
+}
+*/
+outline: dashed 1px red !important;
+
+
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+	font-size: 14px;
+	/* color : #333333 ----> color : #333*/
+}
+
+img {
+	width: 100%;
+	display:block;
+}
+
+
+
+header {
+	background-color: #333;
+	color:#FFF;	
+	padding: 10px;
+    overflow:auto;	
+}
+
+
+
+/* Cuando un contenedor no flotante, contiene hijos flotantes {
+el contendor padre pierde la capacidad de estirar en su altura.
+salvo overflow ---> permite decirle al navegador que hacer cuando 
+el contenido es mayor que la caja.	*/
+
+header h1  {
+	float :left;
+	font-size:28px;
+	font-weight: 500;
+	/*  Cuidado con rutas relativas, para volver atras uso '..'  
+	El padding no afecta el background solo los elementos
+	*/
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	padding-left: 70px;
+	/* (x,y) ejes x e y. en background position - valores en px Apx Bpx
+	right , left, center.    tambien puedo usar doble medidas default
+	*/
+	background-position: left center;
+	/* Admite dos valores tambien, primero ancho, segundo alto, con porcentajes
+
+	cover: pantalla estirada completa;
+	alto proporiconal. 
+
+	contain : ajusta al alto de la pantalla.
+	ancho proporcional;
+	*/
+	background-size: contain;
+}
+
+header a:hover {
+	color:#AAA;
+}
+
+header ul li {
+	float: right;
+	display: inline-block;
+	padding: 5px;	
+
+}
+header ul li a {	
+	color:#FFF;
+	text-decoration: none;
+	text-align: center;
+}
+
+nav {	
+	margin: 0px;
+	list-style: none;
+	width:60%;
+	float : right;
+}
+
+
+
+
+/* <-- refiere a un elemento con id="noticias-destacadas."*/
+
+
+#noticias-destacadas img {
+	width: 100%;
+}
+
+#noticias-destacadas h2 { 
+background-color: #333;
+color:#FFF; 
+font-size: 32px;
+font-weight: bold;
+padding: 20px;
+
+}
+
+.noticia {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content:space-around;
+	border-bottom:solid 2px gray;
+
+
+	margin : 0 20px;
+	padding:20px 0; 
+	border-bottom:solid 1px #CCC;
+
+}
+
+.noticia:last-child{
+	border:none;
+}
+
+#tabla-posiciones table {
+	margin:auto; 
+	border-collapse: collapse;
+	border:none;
+	width:80%;
+
+
+}
+
+#tabla-posiciones table th{ 
+	padding: 10px;
+	background-color: red;
+	color: #FFF;
+	font-weight: 700;
+	font-size: 24px;
+
+}
+
+
+#tabla-posiciones table td{ 
+	padding: 10px;
+	background-color: #CCC;
+}
+
+#tabla-posiciones table td:nth-of-type(odd){
+		font-weight: 700;
+		font-size: 20px;
+		text-align: center;
+		vertical-align: middle;
+}
+
+#tabla-posiciones table td:nth-of-type(even) span {
+	color: #006988;
+	font-weight: bold;
+} 
+
+#tabla-posiciones table tr { 
+	border-bottom : solid 1px #d9d9d9;
+}
+
+#tabla-posiciones table tr:last-child,
+#tabla-posiciones table tr:first-child
+ { 
+	border:none;
+}
+
+
+
+	/*
+		Valor por defecto row, 
+		se distribuyen por la misma fila
+		Valor column se demuestran uno debajo del otro.
+		Hay row, column reverse.
+
+		Align items en row es eje y (start, center, end) 
+		start
+		center
+		end
+
+		Align item es column en eje x (start, center, end)
+		start
+		center
+		end
+
+		Tanto start com end se escriben con Flex- start/end
+			flex-start| center | flex-end 
+
+		Posibles valores no usuales 
+
+
+		Justify content 
+		flex-start | center | flex-end
+
+
+		justify-content 
+		space-between  espacio entre los elementos, demas espacio proporcional
+		space-around : distribuye proporcional entre elementos;
+
+
+
+	*/
+
+
+
+.noticia-img { 
+	width: 35%;
+
+}
+
+.noticia-txt { 
+	width: 60%;
+	/*
+	margin-right: 25%;
+	padding-top: 20px;
+
+	margin : ?arriba? ?right? ?bottom? ?left?;
+	Sigo guiando las agujas del reloj
+	*/
+}
+
+.noticia-txt p,
+.noticia-txt h3,
+.noticia-txt p {
+
+	/* margin: 10px 0 10px 0; */
+	/* Se puede simplificar escribiendo solo las dos primeras*/
+	margin : 20px 0;
+}
+
+.noticia-txt h3{ 
+	font-weight: 700;
+	font-size: 28px;
+	font-style: helvetica;
+	line-height: 150%;
+}
+
+
+
+.noticia-txt p a{ 
+	color:#000;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+
+footer { 
+	background-color: #333;
+	color:#FFF;
+	text-align: center;
+	font-size: 12px;
+	padding: 10px;
+	margin: 12px 0 0 0;
+}
+
+
+
+@media screen and (max-width: 320px) and (max-width: 480px) { 
+	header h1 { 
+		font-size: 24px;
+		padding-left: 
+	}
+
+
+	header nav{ 		
+		display: none;
+		float: none;
+		clear:both;
+	}
+	header nav li {
+		display: block;
+	}
+	header button { 
+		margin:0;
+		padding: 5px ;
+		color : #FFF;
+		border: none;
+		float: right;
+		background-color: transparent;
+		font-size:20px; 
+		line-height: 1;
+		font-weight: 700;
+
+	}
+
+	header button:focus + nav{
+		color:red;
+		display:block;
+	}
+	
+
+}
+
+
+/* 
+Llamadas en plural con nombre plural ,llamadas singular con individual.
+
+*/
+
+/* Siempre a referencia con ancho, vw viewport wuev,
+
+developers.google.com/speed/pagespeed
+
+Tiempo de carga
+3 < bueno 
+5 <= regular
+7 > preocupante.
+10= regular
+10 > mala
+
+display inline no me permite asignar un width.
+
+
+*/
+
+
+
