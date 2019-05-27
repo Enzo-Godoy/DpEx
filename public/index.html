@@ -117,7 +117,7 @@
 
                     //Request lo que pide el cliente
       let ajax = new XMLHttpRequest();
-      ajax.open("GET" ,"https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.iprofesional.com%2Frss%2Ftecnologia");
+      ajax.open("GET" ,"https://api.sheety.co/0928d520-cd98-4031-bf29-11c6a1dae7cb");
       ajax.onload = function() {
         if( ajax.status == 200) {
           // <-- Respuesta exitosa
@@ -139,10 +139,16 @@
 
           //return
           //Mostrar las noticias
+          /*
            for(let i= 0 ; i < noticias.items.length ; i++) {        
             console.log(i);
             crearNoticia(noticias.items[i].title, noticias.items[i].author, noticias.items[i].description,noticias.items[i].enclosure.link,noticias.items[i].link);
             }
+            */ 
+
+            noticias.forEach(function(noticia){
+              crearNoticia( noticia.titulo,noticia.autor, noticia.detalle,noticia.imagen,noticia.fecha);
+            });
        
 
          }
