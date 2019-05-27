@@ -17,16 +17,17 @@ function cambiarLogo(){
 
 
 
-function crearNoticia(titulo, autor, bajada, imagen){
+function crearNoticia(titulo, autor, bajada, imagen,link){
 	let plantilla = `<article class="row noticia ">
                         <div class="col-12 col-lg-4 noticia-img">
-                          <img src="img/${imagen}" class="img-fluid">
+                          <img src="${imagen}" class="img-fluid">
                         </div>
 
                         <div class="col-12 col-lg-8 noticia-txt">
                           <h3>${titulo}</h3>
                           <p>por ${autor}</p>
                           <p>${bajada}</p>
+                          <p><a href=${link}>Fuente</a></p>
                         </div>
 
                        </article>`
