@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const form = require("querystring")
 
 http.createServer(function(request, response)  {
 		
@@ -7,7 +8,23 @@ http.createServer(function(request, response)  {
 
 		let file = (request.url == "/") ? "index.html" : request.url;
 			file = (file.match(/[^.]+(\.[^?#]+)?/) || [])[0];
-		
+		if( request.method == "POST" && file == "/enviar") {
+			//acà hay que leer los datos que mando el formulario
+
+			request.on("data", function (datos){ 
+				datos = datos.toString()
+
+				datos = form.parse (datos )
+
+				response.end(datos)
+			})
+
+			// response.end("se supone que el conejo blanco está más lejos");
+
+
+
+		}
+
 		let ext = file.substring( file.lastIndexOf(".") ).toLowerCase();
 
 		let types = {
@@ -43,6 +60,6 @@ http.createServer(function(request, response)  {
 
 		});
 
-}).listen(4000);
+}).listen(80);
 
 

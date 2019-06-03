@@ -31,79 +31,45 @@
   <body>
       <!-- Inicio Menu -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">DeporteXtremo</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav text-center">
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="far fa-futbol"></i> Fútbol</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-basketball-ball"></i> NBA</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-baseball-ball"></i> Tenis</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-flag-checkered"></i> Fórmula 1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-hand-rock"></i> Boxéo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-medal"></i> JJOO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-motorcycle"></i> Moto GP</a>
-            </li>
-           
-          </ul> 
-        </div>
+       <a class="navbar-brand" href="#">DeporteXtremo</a>
+     
       </nav>
       <!-- Fin Menu -->
 
-      <!-- Inicio Slider -->
-      <div id="slider" class="carousel slide carousel-sli" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/juegos-olimpicos.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption bg-dark position-static text-left p-3">
-              <h2>Paris y Los Ángeles serán las próximas sedes de los Juegos Olímpicos</h2>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/juegos-olimpicos.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption bg-dark position-static text-left p-3">
-              <h2>Ricciardo marcó el ritmo en los libres de Azerbaiyán</h2>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/juegos-olimpicos.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption bg-dark position-static text-left p-3">
-              <h2>En Córdoba arrancó la 1er etapa del 38° Rally de la Argentina</h2>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-      <!-- Fin Slider -->
+  
 
     <main class="container-fluid">
+             <!-- INICIO FORMULARIO -->
+        <form action="./enviar" method="post">
+          <div class="form-group">
+            <label for="titulo">Titulo:</label>
+            <input type="text" name="titulo" class="form-control" placeholder="Ej: Murio Kennedy">
+          </div>
 
-      <section id="ultimas-noticias" class="row">
+          <div class="form-group">
+            <label for="autor">Autor:</label>
+            <input type="text" name="autor" class="form-control" placeholder="Ej: Julio Sanchéz">
+          </div>
 
-      </section>
+          <div class="form-group">
+            <label for="detalle">Detalle:</label>
+            <textarea name="detalle" class="form-control" rows="5" placeholder="Ej: Una bala le saco las ideas de encima..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="imagen">Imagen:</label>
+            <input type="text" name="imagen" class="form-control" placeholder="Ej: https://ibb.co/b27g2u/noticia.jpg">
+          </div>
+
+          <div class="form-group">
+            <!--
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            -->
+            <input type="submit" value="Enviar" class="btn btn-dark">
+          </div>
+        </form>
+        <!-- FIN DEL FORMULARIO-->
+  
 
     </main>
 
@@ -114,78 +80,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script>
-
-                    //Request lo que pide el cliente
-      let ajax = new XMLHttpRequest();
-      ajax.open("GET" ,"https://api.sheety.co/0928d520-cd98-4031-bf29-11c6a1dae7cb");
-      ajax.onload = function() {
-        if( ajax.status == 200) {
-          // <-- Respuesta exitosa
-          //responde lo que devuelve
-
-          //console.log( ajax.response);
-
-            
-          /*
-          console.log("Antes del parseo");
-          console.log(ajax.response);
-          */
-
-          let noticias = JSON.parse(ajax.response);
-
-          console.log("Despues del parseo");
-          console.log(noticias);
-
-
-          //return
-          //Mostrar las noticias
-          /*
-           for(let i= 0 ; i < noticias.items.length ; i++) {        
-            console.log(i);
-            crearNoticia(noticias.items[i].title, noticias.items[i].author, noticias.items[i].description,noticias.items[i].enclosure.link,noticias.items[i].link);
-            }
-            */ 
-
-            noticias.forEach(function(noticia){
-              crearNoticia( noticia.titulo,noticia.autor, noticia.detalle,noticia.imagen,noticia.fecha);
-            });
-       
-
-         }
-      } 
-      
-      //ajax.onload = mostrarNoticias; 
-      ajax.send(); 
-
-      /*
-      Obtenerlos, 
-      convertirlos a formato entendido por lenguaje. 
-      procesarlos
-      mostrarlos.
-
-      */
-
-      
-
-      /**
-      ajax.open( archivo???, ruta???)
-      */
-
-     
-
-      /*
-
-      crearNoticia(noticia[0].titulo, noticia[0].autor, noticia[0].bajada,noticia[0].imagen)
-      crearNoticia(noticia[1].titulo, noticia[1].autor, noticia[1].bajada,noticia[1].imagen)
-      crearNoticia(noticia[2].titulo, noticia[2].autor, noticia[2].bajada,noticia[2].imagen)
-      crearNoticia(noticia[3].titulo, noticia[3].autor, noticia[3].bajada,noticia[3].imagen)
-
-      */
-      /*
-      crearNoticia(noticia2["titulo"], noticia2["autor"], noticia2["bajada"])
-      crearNoticia(noticia3["titulo"], noticia3["autor"], noticia3["bajada"])
-      crearNoticia(noticia4["titulo"], noticia4["autor"], noticia4["bajada"])
-      */
 
 
     </script>
